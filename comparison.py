@@ -41,13 +41,13 @@ def sim_score(path_problem, lexicon_8gram, lexicon_3gram, lexicon_bigram, lexico
             sim_score_unigram = []
             lang = name_dir[:2]
             if lang == 'EN':
-                fw_file = 'english.txt'
+                fw_file = './stopwords/english.txt'
             elif lang == 'DU':
-                fw_file = 'dutch.txt'
+                fw_file = './stopwords/dutch.txt'
             elif lang == 'GR':
-                fw_file = 'greek.txt'
+                fw_file = './stopwords/greek.txt'
             elif lang == 'SP':
-                fw_file = 'spanish.txt'
+                fw_file = './stopwords/spanish.txt'
 
             dir_path = os.path.join(path_problem, name_dir)
             for name1 in glob.glob(dir_path + "/unknown.txt"):
