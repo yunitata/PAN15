@@ -59,13 +59,7 @@ def classifier_predict(model_path, dict_test, output_path_dir):
     estimator = joblib.load(model_file)
     pred = estimator.predict_proba(z)[:, 1]
     pred_accuracy = estimator.predict(z)
-    '''
-    for i in range(len(pred)):
-        if pred[i] >= 0.48 and pred[i] <= 0.5:
-            proba.append(0.6)
-        else:
-            proba.append(pred[i])
-    '''
+    
     k = 0
     for key in dict_test.keys():
         output[key] = pred[k]
