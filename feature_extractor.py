@@ -421,7 +421,7 @@ def freq_function_word(file_path, fw_list):
                             analyzer='word', vocabulary= function_word)
     freq_vec = freq_.fit_transform(text).toarray()
     vec = list(itertools.chain(*freq_vec))
-    for i in vec:
+    for i in xrange(len(vec)):
         freq_norm.append(vec[i]/total_words)
     return freq_norm
 
